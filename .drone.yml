@@ -1,0 +1,22 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: build
+    image: golang:latest
+    commands:
+      - go test -v -short -cover -coverprofile=coverage.txt ./...
+
+  - name: coverage
+    image: plugins/codecov
+    settings:
+      token:
+        from_secret: codecov-token
+
+  - name: notify
+    image: plugins/webhook
+    urls: https://msgbus.mills.io/ci.mills.io
+    when:
+      status:
+        - success
+        - failure

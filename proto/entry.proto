@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package proto;
+
+message Entry {
+	uint32 CRC = 1;
+	string Key = 2;
+	int64 Index = 3;
+	bytes Value = 4;
+	int64 Timestamp = 5;
+}

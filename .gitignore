@@ -1,0 +1,6 @@
+*~*
+*.bak
+
+/coverage.txt
+/bitcask
+/tmp
