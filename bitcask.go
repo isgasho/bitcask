@@ -43,11 +43,22 @@ func (b *Bitcask) Get(key string) ([]byte, error) {
 		return nil, ErrKeyNotFound
 	}
 
-	df, err := NewDatafile(b.path, item.FileID, true)
-	if err != nil {
-		return nil, err
+	var (
+		df  *Datafile
+		err error
+	)
+
+	// Optimization
+	if item.FileID == b.curr.id {
+		df = b.curr
+	} else {
+		// TODO: Pre-open non-active Datafiles and cache the file pointers?
+		df, err = NewDatafile(b.path, item.FileID, true)
+		if err != nil {
+			return nil, err
+		}
+		defer df.Close()
 	}
-	defer df.Close()
 
 	e, err := df.ReadAt(item.Index)
 	if err != nil {
