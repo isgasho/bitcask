@@ -61,11 +61,12 @@ Benchmarks run on a 11" Macbook with a 1.4Ghz Intel Core i7:
 ```
 $ make bench
 ...
-BenchmarkGet-4   	   50000	     33185 ns/op	     600 B/op	      14 allocs/op
-BenchmarkPut-4   	  100000	     16757 ns/op	     699 B/op	       7 allocs/op
+BenchmarkGet-4   	  300000	      5065 ns/op	     144 B/op	       4 allocs/op
+BenchmarkPut-4   	  100000	     14640 ns/op	     699 B/op	       7 allocs/op
 ```
 
-* ~30,000 reads/sec
+* ~30,000 reads/sec for non-active data
+* ~180,000 reads/sec for active data
 * ~60,000 writes/sec
 
 ## License
