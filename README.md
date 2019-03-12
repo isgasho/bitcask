@@ -4,7 +4,7 @@
 [![CodeCov](https://codecov.io/gh/prologic/bitcask/branch/master/graph/badge.svg)](https://codecov.io/gh/prologic/bitcask)
 [![Go Report Card](https://goreportcard.com/badge/prologic/bitcask)](https://goreportcard.com/report/prologic/bitcask)
 [![GoDoc](https://godoc.org/github.com/prologic/bitcask?status.svg)](https://godoc.org/github.com/prologic/bitcask) 
-[![Sourcegraph](https://sourcegraph.com/github.com/prologic/msgbus/-/badge.svg)](https://sourcegraph.com/github.com/prologic/msgbus?badge)
+[![Sourcegraph](https://sourcegraph.com/github.com/prologic/bitcask/-/badge.svg)](https://sourcegraph.com/github.com/prologic/bitcask?badge)
 
 A Bitcask (LSM+WAL) Key/Value Store written in Go.
 
@@ -70,4 +70,4 @@ BenchmarkPut-4   	  100000	     16757 ns/op	     699 B/op	       7 allocs/op
 
 ## License
 
-bitcask is licensed under the [MIT License](https://github.com/prologic/msgbus/blob/master/LICENSE)
+bitcask is licensed under the [MIT License](https://github.com/prologic/bitcask/blob/master/LICENSE)
