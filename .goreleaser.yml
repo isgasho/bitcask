@@ -1,5 +1,6 @@
 builds:
   - 
+    main: ./cmd/bitcask
     flags: -tags "static_build"
     ldflags: -w -X .Version={{.Version}} -X .Commit={{.Commit}}
     env:
