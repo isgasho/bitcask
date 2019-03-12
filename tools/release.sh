@@ -20,6 +20,6 @@ fi
 
 echo "Releasing ${TAG} ..."
 
-git tag -a -s -m "Relase v${TAG}" "v${TAG}"
+git tag -a -s -m "Relase ${TAG}" "${TAG}"
 git push --tags
 goreleaser release --rm-dist
